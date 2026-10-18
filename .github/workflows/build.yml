@@ -41,7 +41,7 @@ jobs:
           echo "Java utilisé pour la compilation :"
           java -version
           echo "JAVA_HOME=$JAVA_HOME"
-          buildozer android clean
+          rm -rf .buildozer
           buildozer -v android debug 2>&1 | tee build.log
 
       - name: Résumé de l'erreur (si échec)
